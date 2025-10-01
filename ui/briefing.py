@@ -33,13 +33,16 @@ def show_briefing_page():
                 game_engine = get_game_engine()
                 # Map theme names to engine format
                 theme_mapping = {
-                    "Classic Detective Noir": "classic detective noir",
-                    "Cozy English Countryside Murder": "cozy English countryside murder", 
-                    "Modern Tech Startup Scandal": "modern tech startup scandal",
-                    "Victorian Era Poisoning": "Victorian era poisoning",
-                    "Art Heist at Prestigious Museum": "art heist at prestigious museum"
+                    "Mumbai Underworld Mystery": "Mumbai underworld crime mystery with Bollywood connections",
+                    "Delhi Political Scandal": "Delhi political corruption and scandal mystery", 
+                    "Bangalore Tech Startup Crime": "Bangalore IT startup corporate crime mystery",
+                    "Kolkata Literary Society Murder": "Kolkata intellectual literary society murder mystery",
+                    "Goa Beach Resort Mystery": "Goa beach resort luxury crime mystery",
+                    "Rajasthan Palace Intrigue": "Rajasthan royal palace intrigue and conspiracy mystery",
+                    "Kerala Backwater Mystery": "Kerala backwaters tourism crime mystery",
+                    "Punjab Farmhouse Crime": "Punjab agricultural farmhouse crime mystery"
                 }
-                engine_theme = theme_mapping.get(theme, "classic detective noir")
+                engine_theme = theme_mapping.get(theme, "Mumbai underworld crime mystery with Bollywood connections")
                 mystery_case = game_engine.generate_mystery(engine_theme)
                 st.session_state["mystery_case"] = mystery_case
                 st.session_state["game_engine"] = game_engine

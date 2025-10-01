@@ -66,7 +66,7 @@ class MysteryGameEngine:
         parser = PydanticOutputParser(pydantic_object=MysteryCase)
         
         prompt = ChatPromptTemplate.from_template(
-            """You are a master mystery writer. Create a compelling, solvable mystery case with rich, atmospheric details.
+            """You are a master mystery writer specializing in Indian settings. Create a compelling, solvable mystery case with rich, atmospheric details set in India.
             
             Theme: {theme}
             
@@ -76,15 +76,19 @@ class MysteryGameEngine:
             - Make suspects interesting with complex motivations and detailed backgrounds
             - Evidence should connect in meaningful ways
             - The solution should be surprising but fair
+            - Include authentic Indian cultural elements, names, locations, and context
+            - Use Indian names for characters (mix of Hindi, regional, and modern Indian names)
+            - Include Indian cultural references, food, festivals, traditions where relevant
             
             Writing Style Requirements:
-            - Write in a noir/mystery style with atmospheric descriptions
-            - Make the initial_scene vivid and immersive (200-300 words)
-            - Give detailed, believable alibis for each suspect (50-100 words each)
-            - Include specific details about times, locations, and circumstances
-            - Use descriptive language that sets the mood and atmosphere
-            - Make victim descriptions rich with personality and background
+            - Write in a noir/mystery style with atmospheric descriptions of Indian settings
+            - Make the initial_scene vivid and immersive (200-300 words) with Indian cultural context
+            - Give detailed, believable alibis for each suspect (50-100 words each) with Indian locations and customs
+            - Include specific details about times, locations, and circumstances in Indian context
+            - Use descriptive language that captures Indian atmosphere and culture
+            - Make victim descriptions rich with personality and Indian background
             - Ensure evidence has compelling descriptions and clear significance
+            - Include references to Indian cities, landmarks, cultural practices, and social dynamics
             
             {format_instructions}
             
